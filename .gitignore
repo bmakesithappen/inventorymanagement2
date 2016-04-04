@@ -27,3 +27,4 @@ DerivedData
 #Pods/
 
 inventorymanagement.xcodeproj/xcuserdata/
+.DS_Store

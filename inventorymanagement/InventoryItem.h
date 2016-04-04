@@ -7,46 +7,51 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CLLocation.h>
+
 
 @interface InventoryItem : NSObject
-@property (nonatomic, copy) NSString * title;
-@property (nonatomic, copy) NSString * location;
-
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) CLLocation *location;
 @end
+
+// -------------------------------------------------
 
 @protocol ValuableItem <NSObject>
 @property (nonatomic, copy) NSNumber *currentValue;
 @property (nonatomic, copy) NSNumber *purchasedValue;
 @end
 
-@protocol composition <NSObject>
-@property (nonatomic, copy) NSString *ceramic;
-@property (nonatomic, copy) NSString *plastic;
+typedef NS_ENUM(NSUInteger, PhysicalMaterial) {
+    PhysicalMaterialCeramic,
+    PhysicalMaterialPlastic,
+    PhysicalMaterialWood,
+    PhysicalMaterialConcrete
+};
 
+@protocol Physical <NSObject>
+@property (nonatomic) PhysicalMaterial material;
+@end
+
+@protocol Framable <NSObject>
+@property (nonatomic) BOOL isFramed;
+@end
+
+// -------------------------------------------------
+
+@interface Record: InventoryItem <ValuableItem>
 
 @end
 
-@protocol framed <NSObject>
-@property (nonatomic, copy) NSString *framed;
-
+@interface StatueFigure : InventoryItem <ValuableItem, Physical>
 
 @end
 
-// do title and location get applied to below
-
-@interface record: InventoryItem <ValuableItem>
+@interface CD : InventoryItem
 
 @end
 
-@interface statueFigure : InventoryItem <ValuableItem,composition>
-
-@end
-
-@interface cds : InventoryItem //other properities dont matter besdides location and title
-
-@end
-
-@interface artPrint : InventoryItem <ValuableItem,framed>
+@interface ArtPrint : InventoryItem <ValuableItem, Framable>
 
 @end
 

@@ -12,7 +12,23 @@
 
 @end
 
+@implementation InventoryItem
 
+@end
 
+@implementation Record
+@synthesize currentValue;
+@synthesize purchasedValue;
+@end
 
+@implementation StatueFigure
 
+@end
+
+@implementation CD
+
+@end
+
+@implementation ArtPrint
+
+@end

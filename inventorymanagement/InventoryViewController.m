@@ -12,13 +12,26 @@
 // Class extension
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *InventoryItem;
+@property (nonatomic, strong) NSArray *inventoryItems;
 @end
 
 @implementation InventoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    InventoryItem *item1 = [InventoryItem new];
+    item1.title = @"Hat";
+    InventoryItem *item2 = [InventoryItem new];
+    item2.title = @"Y The Last Man";
+    ArtPrint *item3 = [ArtPrint new];
+    item3.title = @"Moist Print";
+    
+    self.inventoryItems = @[
+                            item1,
+                            item2,
+                            item3
+                            ];
     
     self.title = @"Inventory";
     self.tableView = [UITableView new];
@@ -34,20 +47,23 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.InventoryItem.count;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    return self.InventoryItem.count;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return [self.InventoryItem[section]count];
+    return self.inventoryItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id item = self.InventoryItem[indexPath.section][indexPath.row];
+    InventoryItem *item = self.inventoryItems[indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = item.title;
+    
+    return cell;
 }
-
 
 #pragma mark - UITableViewDelegate
 
