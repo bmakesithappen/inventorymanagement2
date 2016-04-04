@@ -2,15 +2,17 @@
 //  InventoryViewController.m
 //  Inventory
 //
-//  Created by Christopher Constable on 3/14/16.
+//  Created by Bernard Desert on 3/14/16.
 //  Copyright © 2016 Etsy. All rights reserved.
 //
 
 #import "InventoryViewController.h"
+#import "InventoryItem.h"
 
 // Class extension
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *InventoryItem;
 @end
 
 @implementation InventoryViewController
@@ -32,18 +34,20 @@
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.InventoryItem.count;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return [self.InventoryItem[section]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"Inventory Item %d", (int)indexPath.row];
-    
-    return cell;
+    id item = self.InventoryItem[indexPath.section][indexPath.row];
 }
+
 
 #pragma mark - UITableViewDelegate
 

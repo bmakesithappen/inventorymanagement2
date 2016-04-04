@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE228F671CA1ED540004380F /* InventoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DE228F661CA1ED540004380F /* InventoryItem.m */; };
 		DE301E011C98AABC00D108B1 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE301E001C98AABC00D108B1 /* InventoryViewController.m */; };
 		DE4064151C98A71100F7C479 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4064141C98A71100F7C479 /* main.m */; };
 		DE4064181C98A71100F7C479 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4064171C98A71100F7C479 /* AppDelegate.m */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE228F651CA1ED2D0004380F /* InventoryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InventoryItem.h; sourceTree = "<group>"; };
+		DE228F661CA1ED540004380F /* InventoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryItem.m; sourceTree = "<group>"; };
 		DE301DFF1C98AABC00D108B1 /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
 		DE301E001C98AABC00D108B1 /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
 		DE4064101C98A71100F7C479 /* inventorymanagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inventorymanagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +63,8 @@
 				DE4064171C98A71100F7C479 /* AppDelegate.m */,
 				DE301DFF1C98AABC00D108B1 /* InventoryViewController.h */,
 				DE301E001C98AABC00D108B1 /* InventoryViewController.m */,
+				DE228F651CA1ED2D0004380F /* InventoryItem.h */,
+				DE228F661CA1ED540004380F /* InventoryItem.m */,
 				DE40641F1C98A71100F7C479 /* Assets.xcassets */,
 				DE4064211C98A71100F7C479 /* LaunchScreen.storyboard */,
 				DE4064241C98A71100F7C479 /* Info.plist */,
@@ -148,6 +153,7 @@
 				DE301E011C98AABC00D108B1 /* InventoryViewController.m in Sources */,
 				DE4064181C98A71100F7C479 /* AppDelegate.m in Sources */,
 				DE4064151C98A71100F7C479 /* main.m in Sources */,
+				DE228F671CA1ED540004380F /* InventoryItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

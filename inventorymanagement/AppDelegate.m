@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  Inventory
 //
-//  Created by Christopher Constable on 3/14/16.
+//  Created by Bernard Desert 3/14/16.
 //  Copyright © 2016 Etsy. All rights reserved.
 //
 
@@ -25,6 +25,8 @@
     
     // A "container controller" that will provide a nav bar
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    self.window.backgroundColor = [UIColor redColor];
     
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
