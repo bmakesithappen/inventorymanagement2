@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     Record *item1 = [Record new];
     item1.title = @"YasinGayeTheArrival";
     Record *item2 = [Record new];
@@ -28,19 +27,31 @@
     Record *item3 = [Record new];
     item3.title = @"MobbDeepTheInfamous";
     
-    StatueFigure *item4 = [StatueFigure new];
-    item4.title = @"BlackCanary";
-    StatueFigure *item5 = [StatueFigure new];
-    item5.title = @"BatmanBlackWhiteRoss";
-    StatueFigure *item6 = [StatueFigure new];
-    item6.title = @"BatmandBlackWhiteMagnolia";
+    NSArray *figureTitles = @[
+        @"BlackCanary",
+        @"BatmanBlackWhiteRoss",
+        @"BatmandBlackWhiteMagnolia"
+    ];
     
-    CD *item7 = [CD new];
-    item7.title = @"WuTangEnter36Chamber";
-    CD *item8 = [CD new];
-    item8.title = @"KanyeWestCollegeDropOut";
-    CD *item9= [CD new];
-    item9.title = @"RadioheadTheBends";
+    NSMutableArray *figures = [NSMutableArray new];
+    for (NSString *title in figureTitles) {
+        StatueFigure *item = [StatueFigure new];
+        item.title = title;
+        [figures addObject:item];
+    }
+    
+    NSArray *cdTitles = @[
+        @"WuTangEnter36Chamber",
+        @"KanyeWestCollegeDropOut",
+        @"RadioheadTheBends"
+    ];
+    
+    NSMutableArray *cds = [NSMutableArray new];
+    for (NSString *title in cdTitles) {
+        CD *item = [CD new];
+        item.title = title;
+        [cds addObject:item];
+    }
     
     ArtPrint *item10 = [ArtPrint new];
     item10.title = @"TheFlashKeronGrant";
@@ -56,23 +67,32 @@
     ComicBook *item15 = [ComicBook new];
     item15.title = @"NewMutants98";
     
-    self.inventoryItems = @[
-                            item1,
-                            item2,
-                            item3,
-                            item4,
-                            item5,
-                            item6,
-                            item7,
-                            item8,
-                            item9,
-                            item10,
-                            item11,
-                            item12,
-                            item13,
-                            item14,
-                            item15,
-                            ];
+    NSArray *originalItems = @[
+                               item1,
+                               item2,
+                               item3,
+                               item10,
+                               item11,
+                               item12,
+                               item13,
+                               item14,
+                               item15,
+                               ];
+    
+    // allItems is a list of lists
+    NSArray *allItems = @[
+        originalItems,
+        figures,
+        cds
+    ];
+    
+    // Flatten
+    NSMutableArray *flattenedItems = [NSMutableArray new];
+    for (NSArray *list in allItems) {
+        [flattenedItems addObjectsFromArray:list];
+    }
+    
+    self.inventoryItems = flattenedItems;
     
     self.title = @"Inventory";
     self.tableView = [UITableView new];
