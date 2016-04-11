@@ -22,13 +22,22 @@
 @end
 
 @implementation StatueFigure
-
+@synthesize currentValue;
+@synthesize purchasedValue;
+@synthesize material;
+@synthesize height;
 @end
 
 @implementation CD
-
 @end
 
 @implementation ArtPrint
+@synthesize currentValue;
+@synthesize purchasedValue;
+@synthesize isFramed;
+@end
 
+@implementation ComicBook
+@synthesize currentValue;
+@synthesize purchasedValue;
 @end

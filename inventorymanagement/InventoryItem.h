@@ -18,19 +18,27 @@
 // -------------------------------------------------
 
 @protocol ValuableItem <NSObject>
-@property (nonatomic, copy) NSNumber *currentValue;
-@property (nonatomic, copy) NSNumber *purchasedValue;
+@property (nonatomic, strong) NSNumber *currentValue;
+@property (nonatomic, strong) NSNumber *purchasedValue;
 @end
 
 typedef NS_ENUM(NSUInteger, PhysicalMaterial) {
     PhysicalMaterialCeramic,
     PhysicalMaterialPlastic,
-    PhysicalMaterialWood,
-    PhysicalMaterialConcrete
 };
 
 @protocol Physical <NSObject>
 @property (nonatomic) PhysicalMaterial material;
+@end
+
+typedef NS_ENUM(NSUInteger, StatueFigureSize) {
+    StatueFigureSizeSmall,
+    StatueFigureSizeLarge,
+    StatueFigureSizeBust,
+};
+
+@protocol Size <NSObject>
+@property (nonatomic) StatueFigureSize height;
 @end
 
 @protocol Framable <NSObject>
@@ -43,7 +51,7 @@ typedef NS_ENUM(NSUInteger, PhysicalMaterial) {
 
 @end
 
-@interface StatueFigure : InventoryItem <ValuableItem, Physical>
+@interface StatueFigure : InventoryItem <ValuableItem, Physical, Size>
 
 @end
 
@@ -52,6 +60,10 @@ typedef NS_ENUM(NSUInteger, PhysicalMaterial) {
 @end
 
 @interface ArtPrint : InventoryItem <ValuableItem, Framable>
+
+@end
+
+@interface ComicBook : InventoryItem <ValuableItem>
 
 @end
 

@@ -20,17 +20,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    InventoryItem *item1 = [InventoryItem new];
-    item1.title = @"Hat";
-    InventoryItem *item2 = [InventoryItem new];
-    item2.title = @"Y The Last Man";
-    ArtPrint *item3 = [ArtPrint new];
-    item3.title = @"Moist Print";
+    
+    Record *item1 = [Record new];
+    item1.title = @"YasinGayeTheArrival";
+    Record *item2 = [Record new];
+    item2.title = @"YasinGayeTheDeparture";
+    Record *item3 = [Record new];
+    item3.title = @"MobbDeepTheInfamous";
+    
+    StatueFigure *item4 = [StatueFigure new];
+    item4.title = @"BlackCanary";
+    StatueFigure *item5 = [StatueFigure new];
+    item5.title = @"BatmanBlackWhiteRoss";
+    StatueFigure *item6 = [StatueFigure new];
+    item6.title = @"BatmandBlackWhiteMagnolia";
+    
+    CD *item7 = [CD new];
+    item7.title = @"WuTangEnter36Chamber";
+    CD *item8 = [CD new];
+    item8.title = @"KanyeWestCollegeDropOut";
+    CD *item9= [CD new];
+    item9.title = @"RadioheadTheBends";
+    
+    ArtPrint *item10 = [ArtPrint new];
+    item10.title = @"TheFlashKeronGrant";
+    ArtPrint *item11 = [ArtPrint new];
+    item11.title = @"WonderWomanKeronGrant";
+    ArtPrint *item12 = [ArtPrint new];
+    item12.title = @"BlackCanaryArtgem";
+    
+    ComicBook *item13 = [ComicBook new];
+    item13.title = @"MoonKnightEllis1";
+    ComicBook *item14 = [ComicBook new];
+    item14.title = @"IronFistPowerman1";
+    ComicBook *item15 = [ComicBook new];
+    item15.title = @"NewMutants98";
     
     self.inventoryItems = @[
                             item1,
                             item2,
-                            item3
+                            item3,
+                            item4,
+                            item5,
+                            item6,
+                            item7,
+                            item8,
+                            item9,
+                            item10,
+                            item11,
+                            item12,
+                            item13,
+                            item14,
+                            item15,
                             ];
     
     self.title = @"Inventory";
