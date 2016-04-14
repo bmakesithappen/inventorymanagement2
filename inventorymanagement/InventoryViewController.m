@@ -20,13 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Record *item1 = [Record new];
-    item1.title = @"YasinGayeTheArrival";
-    Record *item2 = [Record new];
-    item2.title = @"YasinGayeTheDeparture";
-    Record *item3 = [Record new];
-    item3.title = @"MobbDeepTheInfamous";
+    NSArray *recordTitles = @[
+        @"YasinGayeTheArrival",
+        @"YasinGayeTheDeparture",
+        @"MobbDeepTheInfamous"
+    ];
     
+    NSMutableArray *records = [NSMutableArray new];
+    for (NSString *title in recordTitles) {
+        Record *item = [Record new];
+        item.title = title;
+        [records addObject:item];
+    }
+
     NSArray *figureTitles = @[
         @"BlackCanary",
         @"BatmanBlackWhiteRoss",
@@ -53,40 +59,40 @@
         [cds addObject:item];
     }
     
-    ArtPrint *item10 = [ArtPrint new];
-    item10.title = @"TheFlashKeronGrant";
-    ArtPrint *item11 = [ArtPrint new];
-    item11.title = @"WonderWomanKeronGrant";
-    ArtPrint *item12 = [ArtPrint new];
-    item12.title = @"BlackCanaryArtgem";
-    
-    ComicBook *item13 = [ComicBook new];
-    item13.title = @"MoonKnightEllis1";
-    ComicBook *item14 = [ComicBook new];
-    item14.title = @"IronFistPowerman1";
-    ComicBook *item15 = [ComicBook new];
-    item15.title = @"NewMutants98";
-    
-    NSArray *originalItems = @[
-                               item1,
-                               item2,
-                               item3,
-                               item10,
-                               item11,
-                               item12,
-                               item13,
-                               item14,
-                               item15,
-                               ];
-    
-    // allItems is a list of lists
-    NSArray *allItems = @[
-        originalItems,
-        figures,
-        cds
+    NSArray * printTitles = @[
+             @"TheFlashKeronGrant",
+             @"WonderWomanKeronGrant",
+             @"BlackCanaryArtgem"
     ];
     
-    // Flatten
+    NSMutableArray *prints = [NSMutableArray new];
+    for (NSString *title in printTitles) {
+        ArtPrint *item = [ArtPrint new];
+        item.title = title;
+        [prints addObject:item];
+    }
+    
+    NSArray *comicTitles = @[
+            @"MoonKnightEllis1",
+            @"IronFistPowerman1",
+            @"NewMutants98",
+    ];
+   
+    NSMutableArray *comics = [NSMutableArray new];
+    for (NSString *title in comicTitles) {
+        ComicBook *item = [ComicBook new];
+        item.title = title;
+        [comics addObject:item];
+    }
+    
+    NSArray *allItems = @[
+       records,
+       figures,
+       cds,
+       prints,
+       comics
+    ];
+    
     NSMutableArray *flattenedItems = [NSMutableArray new];
     for (NSArray *list in allItems) {
         [flattenedItems addObjectsFromArray:list];
