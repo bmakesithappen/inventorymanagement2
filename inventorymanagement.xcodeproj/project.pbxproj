@@ -13,6 +13,8 @@
 		DE4064181C98A71100F7C479 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4064171C98A71100F7C479 /* AppDelegate.m */; };
 		DE4064201C98A71100F7C479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE40641F1C98A71100F7C479 /* Assets.xcassets */; };
 		DE4064231C98A71100F7C479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4064211C98A71100F7C479 /* LaunchScreen.storyboard */; };
+		DEE30AD51CC031DC00CC668E /* InventoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE30AD41CC031DC00CC668E /* InventoryCollection.m */; };
+		DEE30AD81CC034E200CC668E /* InventoryCollectionGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE30AD71CC034E200CC668E /* InventoryCollectionGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,10 @@
 		DE40641F1C98A71100F7C479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE4064221C98A71100F7C479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE4064241C98A71100F7C479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE30AD31CC031DC00CC668E /* InventoryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryCollection.h; sourceTree = "<group>"; };
+		DEE30AD41CC031DC00CC668E /* InventoryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryCollection.m; sourceTree = "<group>"; };
+		DEE30AD61CC034E200CC668E /* InventoryCollectionGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryCollectionGenerator.h; sourceTree = "<group>"; };
+		DEE30AD71CC034E200CC668E /* InventoryCollectionGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryCollectionGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,10 @@
 				DE301E001C98AABC00D108B1 /* InventoryViewController.m */,
 				DE228F651CA1ED2D0004380F /* InventoryItem.h */,
 				DE228F661CA1ED540004380F /* InventoryItem.m */,
+				DEE30AD31CC031DC00CC668E /* InventoryCollection.h */,
+				DEE30AD41CC031DC00CC668E /* InventoryCollection.m */,
+				DEE30AD61CC034E200CC668E /* InventoryCollectionGenerator.h */,
+				DEE30AD71CC034E200CC668E /* InventoryCollectionGenerator.m */,
 				DE40641F1C98A71100F7C479 /* Assets.xcassets */,
 				DE4064211C98A71100F7C479 /* LaunchScreen.storyboard */,
 				DE4064241C98A71100F7C479 /* Info.plist */,
@@ -153,6 +163,8 @@
 				DE301E011C98AABC00D108B1 /* InventoryViewController.m in Sources */,
 				DE4064181C98A71100F7C479 /* AppDelegate.m in Sources */,
 				DE4064151C98A71100F7C479 /* main.m in Sources */,
+				DEE30AD51CC031DC00CC668E /* InventoryCollection.m in Sources */,
+				DEE30AD81CC034E200CC668E /* InventoryCollectionGenerator.m in Sources */,
 				DE228F671CA1ED540004380F /* InventoryItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
