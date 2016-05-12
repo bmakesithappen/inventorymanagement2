@@ -14,43 +14,14 @@
 
 @implementation AddInventoryViewController
 
-/*
 
-# pragma actions 
-
- - (void)addButtonWasTapped:(id)sender {
-    AddInventoryViewController *addInventoryVC = [AddInventoryViewController new];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:addInventoryVC];
-    
-    // Present "model" view controller
-    // Modal controllers temporarly bring us to the new workflow.
-    [ self presentViewController:navVC
-                        animated:YES
-                      completion:nil];
-    
+- (void)cancelButtonWasTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
-#pragma View Lifecyle
- 
- - (void)viewDidLoad {
- [super viewDidLoad];
- 
- self.navigationItem.leftBarButtonItem
- = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
- target:self
- action:@selector(addButtonWasTapped:)];
- 
- 
-*/
 
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    // Give the add VC a title
- 
-    // Create a cancael button that brings you
-    // back to the previous screen
  
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -61,13 +32,17 @@
                                       45); // height
     titleTextField.placeholder = @"title";
     [self.view addSubview:titleTextField];
+
+self.navigationItem.rightBarButtonItem
+= [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                target:self
+                                                action:@selector
+                                                (cancelButtonWasTapped:)];
+
 }
 
-    
-- (void)cancelButtonWasTapped:(id)sender {
-    [self dismissViewControllerAnimated:YES
-                             completion:nil];
-        
-}
+
+
+
 
 @end
