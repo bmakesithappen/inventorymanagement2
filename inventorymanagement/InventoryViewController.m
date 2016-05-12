@@ -9,6 +9,7 @@
 #import "InventoryViewController.h"
 #import "InventoryItem.h"
 #import "InventoryCollectionGenerator.h"
+#import "AddInventoryViewController.h"
 
 // Class extension
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -18,8 +19,30 @@
 
 @implementation InventoryViewController
 
+
+#pragma mark - Actions
+
+- (void)addButtonWasTapped:(id)sender {
+    AddInventoryViewController *addInventoryVC = [AddInventoryViewController new];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:addInventoryVC];
+    
+    // Present "model" view controller
+    // Modal controllers temporarly bring us to the new workflow.
+    [ self presentViewController:navVC
+                        animated:YES
+                      completion:nil];
+ 
+}
+
+#pragma mark - View Lifecyle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.leftBarButtonItem
+    = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                          target:self
+                                                                                          action:@selector(addButtonWasTapped:)];
     
     self.inventoryCollections = [InventoryCollectionGenerator testCollections];
     self.title = @"Inventory";
@@ -36,22 +59,26 @@
 
 #pragma mark - UITableViewDataSource
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     return self.inventoryCollections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     return self.inventoryCollections[section].inventoryItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
     InventoryCollection *collection = self.inventoryCollections[indexPath.section];
     InventoryItem *item = collection.inventoryItems[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.text = item.title;
-    
+
     return cell;
 }
 
@@ -62,7 +89,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row %d was tapped.", (int)indexPath.row);
+    
+    InventoryViewController *viewController = [InventoryViewController new];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 @end
