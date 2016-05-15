@@ -14,9 +14,16 @@
 
 @implementation AddInventoryViewController
 
+#pragma mark - Lifecycle 
 
-- (void)cancelButtonWasTapped:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil
+                         bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:<#nibNameOrNil#> bundle:<#nibBundleOrNil#>];
+    if (!self) { return nil; }
+    
+    self.title = @"add";
+    
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -39,10 +46,14 @@ self.navigationItem.rightBarButtonItem
                                                 action:@selector
                                                 (cancelButtonWasTapped:)];
 
+
 }
 
+#pragma mark - Actions
 
-
+- (void)cancelButtonWasTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 @end
