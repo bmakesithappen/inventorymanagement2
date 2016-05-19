@@ -36,6 +36,8 @@
 
 #pragma mark - View Lifecyle
 
+// I think I change the table or view that loads after clickig on an item below here BD
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
