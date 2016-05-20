@@ -10,6 +10,7 @@
 #import "InventoryItem.h"
 #import "InventoryCollectionGenerator.h"
 #import "AddInventoryViewController.h"
+#import "InventoryItemViewController.h"
 
 // Class extension
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -91,8 +92,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    InventoryCollection *collection = self.inventoryCollections[indexPath.section];
+    InventoryItem *item = collection.inventoryItems[indexPath.row];
     
-    InventoryViewController *viewController = [InventoryViewController new];
+    InventoryItemViewController *viewController = [[InventoryItemViewController alloc] initWithInventoryItem:item];
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

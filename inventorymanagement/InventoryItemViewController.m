@@ -10,27 +10,35 @@
 
 @interface InventoryItemViewController ()
 
-@property (nonatomic,copy) NSString *inventoryItem;
+@property (nonatomic,strong) InventoryItem *inventoryItem;
 
 @end
 
 @implementation InventoryItemViewController
 
-- (instancetype)initWithListing:(NSString *)inventoryItem {
+#pragma mark - Lifecyle
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    return [self initWithInventoryItem:nil];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    return [self initWithInventoryItem:nil];
+}
+
+- (instancetype)initWithInventoryItem:(InventoryItem *)inventoryItem {
     self = [super initWithNibName:nil bundle:nil];
     if (!self) {
         return nil;
     }
-    
     self.inventoryItem = inventoryItem;
-    
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.inventoryItem;
+    self.title = self.inventoryItem.title;
     self.view.backgroundColor = [UIColor whiteColor];
 }
 

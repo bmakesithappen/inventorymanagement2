@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InventoryItem.h"
 
 @interface InventoryItemViewController : UIViewController
 
-// should Lisitng be InventoryItem
+- (instancetype)initWithInventoryItem:(InventoryItem *)inventoryItem NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)initWithListing:(NSString *)inventoryItem NS_DESIGNATED_INITIALIZER;
-
-@property (nonatomic, copy, readonly) NSString *inventoryItem;
- 
+@property (nonatomic, strong, readonly) InventoryItem *inventoryItem;
 
 @end
 
