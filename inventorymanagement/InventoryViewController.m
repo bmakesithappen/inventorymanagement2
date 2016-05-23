@@ -11,6 +11,7 @@
 #import "InventoryCollectionGenerator.h"
 #import "AddInventoryViewController.h"
 #import "InventoryItemViewController.h"
+#import "InventoryItemsDetailsViewController.h"
 
 // Class extension
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -37,7 +38,6 @@
 
 #pragma mark - View Lifecyle
 
-// I think I change the table or view that loads after clickig on an item below here BD
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -87,9 +87,12 @@
 
 #pragma mark - UITableViewDelegate
 
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return self.inventoryCollections[section].name;
 }
+
+// add InventoryItemsViewController
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     InventoryCollection *collection = self.inventoryCollections[indexPath.section];
