@@ -23,6 +23,8 @@
     for (NSString *title in recordTitles) {
         Record *item = [Record new];
         item.title = title;
+        item.purchasedValue = @(arc4random_uniform(50) +10);
+        item.currentValue = @(arc4random_uniform(100));
         [records.inventoryItems addObject:item];
     }
     

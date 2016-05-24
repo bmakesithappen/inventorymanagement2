@@ -40,6 +40,27 @@
     
     self.title = self.inventoryItem.title;
     self.view.backgroundColor = [UIColor whiteColor];
+    
+
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.frame = CGRectMake(20, 80, self.view.bounds.size.width - 40, 45);
+    titleLabel.textColor = [UIColor darkTextColor];
+    titleLabel.text = self.inventoryItem.title;
+    [self.view addSubview:titleLabel];
+
+    UILabel *locationLabel = [[UILabel alloc] init];
+    locationLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
+    locationLabel.textColor = [UIColor darkTextColor];
+    locationLabel.font = [UIFont systemFontOfSize:15];
+    locationLabel.text = self.inventoryItem.location ? @"Has location" : @"No location";
+    [self.view addSubview:locationLabel];
+
+    if ([self.inventoryItem isKindOfClass:[Record class]]) {
+           // Add another label that has additional details...
+       } else if ([self.inventoryItem isKindOfClass:[CD class]]) {
+              // CD stuff...
+       }
+
 }
 
 

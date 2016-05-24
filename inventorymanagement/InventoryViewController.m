@@ -11,7 +11,7 @@
 #import "InventoryCollectionGenerator.h"
 #import "AddInventoryViewController.h"
 #import "InventoryItemViewController.h"
-#import "InventoryItemsDetailsViewController.h"
+#import "InventoryItemDetailsViewController.h"
 
 // Class extension
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
