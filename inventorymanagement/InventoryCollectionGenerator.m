@@ -39,6 +39,10 @@
     for (NSString *title in figureTitles) {
         StatueFigure *item = [StatueFigure new];
         item.title = title;
+        item.purchasedValue = @(arc4random_uniform(50) +10);
+        item.currentValue = @(arc4random_uniform(100));
+      //  item.material = set bool for material (plastic or ceramic)
+      //  item.height = set bool for height (full size or bust or small)
         [figures.inventoryItems addObject:item];
     }
     
@@ -67,6 +71,9 @@
     for (NSString *title in printTitles) {
         ArtPrint *item = [ArtPrint new];
         item.title = title;
+        item.purchasedValue = @(arc4random_uniform(50) +10);
+        item.currentValue = @(arc4random_uniform(100));
+        // item.isFramed = set bool for Framed Yes / no 
         [prints.inventoryItems addObject:item];
     }
     
@@ -81,6 +88,8 @@
     for (NSString *title in comicTitles) {
         ComicBook *item = [ComicBook new];
         item.title = title;
+        item.purchasedValue = @(arc4random_uniform(50) +10);
+        item.currentValue = @(arc4random_uniform(100));
         [comics.inventoryItems addObject:item];
     }
     

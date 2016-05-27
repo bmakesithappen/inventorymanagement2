@@ -30,7 +30,7 @@
     [super viewDidLoad];
  
  
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blueColor];
     
     UITextField *titleTextField = [UITextField new];
     titleTextField.frame = CGRectMake(40, // points from the left side
