@@ -41,8 +41,8 @@
         item.title = title;
         item.purchasedValue = @(arc4random_uniform(50) +10);
         item.currentValue = @(arc4random_uniform(100));
-      //  item.material = set bool for material (plastic or ceramic)
-      //  item.height = set bool for height (full size or bust or small)
+        item.material = PhysicalMaterialCeramic;
+        item.height = StatueFigureSizeBust;
         [figures.inventoryItems addObject:item];
     }
     
@@ -73,7 +73,13 @@
         item.title = title;
         item.purchasedValue = @(arc4random_uniform(50) +10);
         item.currentValue = @(arc4random_uniform(100));
-        // item.isFramed = set bool for Framed Yes / no 
+        
+        // arc4random() gives a random number
+        // %2 divides the number by 2 and returns the remainder
+        // if the remainder is 1 then we return YES
+        // if the remainder is 0 (NO) we return NO
+        
+        item.isFramed = (arc4random() % 2) ? YES : NO;
         [prints.inventoryItems addObject:item];
     }
     

@@ -39,8 +39,13 @@
     [super viewDidLoad];
     
     self.title = self.inventoryItem.title;
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    // I feel this is too many UILabels
+    // Would like to move these in order of how they are displayed
+    // title , location , purchase , current ,
+    // our $$ values are not showing when clinking an item autogenerator not working
+    // arc4random ^ 
 
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.frame = CGRectMake(20, 80, self.view.bounds.size.width - 40, 45);
@@ -56,38 +61,76 @@
     [self.view addSubview:locationLabel];
         
     UILabel *purchasedValueLabel = [[UILabel alloc] init];
-    purchasedValueLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
+    purchasedValueLabel.frame = CGRectMake(20, 300, self.view.bounds.size.width - 40, 30);
     purchasedValueLabel.textColor = [UIColor darkTextColor];
     purchasedValueLabel.font = [UIFont systemFontOfSize:15];
     [self.view addSubview:purchasedValueLabel];
-
-/*
-    UILabel *materialLabel = [[UILabel alloc] init];
-    materialLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
-    materialLabel.textColor = [UIColor darkTextColor];
-    materialLabel.font = [UIFont systemFontOfSize:15];
-    materialLabel = self.inventoryItem.materialLabel ? @"Ceramic" : @"Plastic";
-    [self.view addSubview:materialLabel.Label];
- 
-    UILabel *isFramedLabel = [[UILabel alloc] init];
-    isFramedLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
-    isFramedLabel.textColor = [UIColor darkTextColor];
-    isFramedLabel .font = [UIFont systemFontOfSize:15];
-    isFramedLabel = self.inventoryItem.isFramedLabel  ? @"isFramed" : @"notFramed"; (just do yes or no?)
-    [self.view addSubview:heightLabel.Label];
- 
-*/
+  
+    UILabel *currentValueLabel = [[UILabel alloc] init];
+    currentValueLabel.frame = CGRectMake(20, 250, self.view.bounds.size.width - 40, 30);
+    currentValueLabel.textColor = [UIColor darkTextColor];
+    currentValueLabel.font = [UIFont systemFontOfSize:15];
+    [self.view addSubview:currentValueLabel];
+    
+   /*  BOOL for Framed
+    
+    UILabel *framedLabel = [[UILabel alloc] init];
+    framedLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
+    framedLabel.textColor = [UIColor darkTextColor];
+    framedLabel.font = [UIFont systemFontOfSize:15];
+    framedLabel.text = self.inventoryItem.? @"Has location" : @"No location";
+    [self.view addSubview:framedLabel];
+    
+    */
     
     
-    if ([self.inventoryItem isKindOfClass:[Record class]]) {
-        // Add another label that has additional details...
-    } else if ([self.inventoryItem isKindOfClass:[CD class]]) {
-        // CD stuff...
+    
+    if ([self.inventoryItem conformsToProtocol:@protocol(Size)]) {
+        id <Size> sizeItem = (id <Size>)self.inventoryItem;
+        UILabel *label = [[UILabel alloc] init];
+        label.frame = CGRectMake(20, 200, self.view.bounds.size.width - 40, 30);
+        label.textColor = [UIColor darkTextColor];
+        label.font = [UIFont systemFontOfSize:15];
+        
+        switch (sizeItem.height) {
+            case StatueFigureSizeSmall:
+                label.text = @"Small";
+                break;
+            case StatueFigureSizeLarge:
+                label.text = @"Large";
+                break;
+            case StatueFigureSizeBust:
+                label.text = @"Bust";
+                break;
+                
+        }
+        
+        [self.view addSubview:label];
+        
     }
 
-
+    if ([self.inventoryItem conformsToProtocol:@protocol(Physical)]) {
+    id <Physical> physicalItem = (id <Physical>)self.inventoryItem;
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(20, 160, self.view.bounds.size.width - 40, 30);
+    label.textColor = [UIColor darkTextColor];
+    label.font = [UIFont systemFontOfSize:15];
+        
+      switch (physicalItem.material) {
+            case PhysicalMaterialPlastic:
+            label.text = @"Plastic";
+            break;
+            case PhysicalMaterialCeramic:
+            label.text = @"Ceramic";
+            break;
+              
+      }
+        
+        [self.view addSubview:label];
+ 
+}
+ 
 }
 
-
-
 @end
+
