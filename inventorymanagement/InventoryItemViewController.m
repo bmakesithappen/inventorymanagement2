@@ -72,7 +72,7 @@
     currentValueLabel.font = [UIFont systemFontOfSize:15];
     [self.view addSubview:currentValueLabel];
     
-   /*  BOOL for Framed
+/*  BOOL for Framed
     
     UILabel *framedLabel = [[UILabel alloc] init];
     framedLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
@@ -81,9 +81,10 @@
     framedLabel.text = self.inventoryItem.? @"Has location" : @"No location";
     [self.view addSubview:framedLabel];
     
-    */
+ */
     
     
+    // do i need this if statement like I do for Physical see line 112
     
     if ([self.inventoryItem conformsToProtocol:@protocol(Size)]) {
         id <Size> sizeItem = (id <Size>)self.inventoryItem;
