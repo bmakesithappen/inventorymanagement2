@@ -18,6 +18,9 @@
 
 #pragma mark - Lifecyle
 
+// Fix so that different labels show
+// Fix BOOL for Framed
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     return [self initWithInventoryItem:nil];
 }
