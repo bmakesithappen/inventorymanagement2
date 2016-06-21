@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "66DD152BC43BA090DD1263D7FD92259738B6CD8C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "10265E242415D473A6A613214DB7AC3EE3D43F93" : 0,
+    "66DD152BC43BA090DD1263D7FD92259738B6CD8C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1D6540DB-E0FA-4CB2-954B-77D6679F213D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "10265E242415D473A6A613214DB7AC3EE3D43F93" : "inventorymanagement\/inventorymanagement\/Frameworks\/KIF\/",
+    "66DD152BC43BA090DD1263D7FD92259738B6CD8C" : "inventorymanagement\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "inventorymanagement",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "inventorymanagement.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kif-framework\/KIF.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "10265E242415D473A6A613214DB7AC3EE3D43F93"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.etsycorp.com:bdesert\/inventoryapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "66DD152BC43BA090DD1263D7FD92259738B6CD8C"
+    }
+  ]
+}
