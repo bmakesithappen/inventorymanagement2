@@ -30,11 +30,9 @@
     
     [tester tapViewWithAccessibilityLabel:@"YasinGayeTheArrival"];
     
-    // I do not have any functions in my app that would apply to the below:
+    [tester tapViewWithAccessibilityLabel:@"add button"];
     
-   // [tester waitForTappableViewWithAccessibilityLabel:@""];
-    
-   // [tester enterText:<#(NSString *)#> intoViewWithAccessibilityLabel:<#(NSString *)#>
+    [tester tapViewWithAccessibilityLabel:@"cancel button"];
 
     
     // This is an example of a functional test case.

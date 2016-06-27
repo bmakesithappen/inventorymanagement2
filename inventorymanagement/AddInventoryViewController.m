@@ -14,7 +14,7 @@
 
 @implementation AddInventoryViewController
 
-#pragma mark - Lifecycle 
+#pragma mark - Lifecycle
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil
                          bundle:(NSBundle *)nibBundleOrNil {
@@ -28,8 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
- 
+    
+    
     self.view.backgroundColor = [UIColor blueColor];
     
     UITextField *titleTextField = [UITextField new];
@@ -39,17 +39,32 @@
                                       45); // height
     titleTextField.placeholder = @"title";
     [self.view addSubview:titleTextField];
+    
+    self.navigationItem.rightBarButtonItem
+    = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                    target:self
+                                                    action:@selector
+       (addButtonWasTapped:)];
+    
+    self.navigationItem.rightBarButtonItem.accessibilityLabel = @"add button";
 
-self.navigationItem.rightBarButtonItem
-= [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                target:self
-                                                action:@selector
-                                                (cancelButtonWasTapped:)];
-
-
+    
+    self.navigationItem.leftBarButtonItem
+    = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                    target:self
+                                                    action:@selector
+       (cancelButtonWasTapped:)];
+    
+    self.navigationItem.leftBarButtonItem.accessibilityLabel = @"cancel button";
+    
 }
 
 #pragma mark - Actions
+
+- (void)addButtonWasTapped:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 - (void)cancelButtonWasTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];

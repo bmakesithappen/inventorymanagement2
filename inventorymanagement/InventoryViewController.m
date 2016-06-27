@@ -44,8 +44,9 @@
     
     self.navigationItem.leftBarButtonItem
     = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                                          target:self
-                                                                                          action:@selector(addButtonWasTapped:)];
+                                                                                      target:self
+                                                                                      action:@selector(addButtonWasTapped:)];
+    self.navigationItem.leftBarButtonItem.accessibilityLabel=@"add button";
     
     self.inventoryCollections = [InventoryCollectionGenerator testCollections];
     self.title = @"Inventory";

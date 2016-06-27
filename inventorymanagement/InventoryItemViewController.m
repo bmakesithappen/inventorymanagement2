@@ -83,8 +83,7 @@
         
     }
     
-    /*
-     if ([self.inventoryItem conformsToProtocol:@protocol(Framable)]) {
+     /* if ([self.inventoryItem conformsToProtocol:@protocol(Framable)]) {
      UILabel *framedLabel = [[UILabel alloc] init];
      framedLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
      framedLabel.textColor = [UIColor darkTextColor];
@@ -92,8 +91,8 @@
      // should it be a BOOL or a swtich
      // do i need to update the property to have values like Physical ENUM
      // locationLabel.text = self.inventoryItem. ? @"Has location" : @"No location";
-     */
     
+         */
     
     if ([self.inventoryItem conformsToProtocol:@protocol(Size)]) {
         id <Size> sizeItem = (id <Size>)self.inventoryItem;

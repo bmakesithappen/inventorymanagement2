@@ -13,7 +13,6 @@
 		DE4064181C98A71100F7C479 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4064171C98A71100F7C479 /* AppDelegate.m */; };
 		DE4064201C98A71100F7C479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE40641F1C98A71100F7C479 /* Assets.xcassets */; };
 		DE4064231C98A71100F7C479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4064211C98A71100F7C479 /* LaunchScreen.storyboard */; };
-		DE75B12B1D0F4CAA00F486A2 /* inventorymanagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE75B12A1D0F4CAA00F486A2 /* inventorymanagementTests.m */; };
 		DE75B1451D0F66CD00F486A2 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE75B1191D0F4B1C00F486A2 /* libKIF.a */; };
 		DE75B1461D0F670300F486A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE75B1351D0F4D1C00F486A2 /* QuartzCore.framework */; };
 		DE75B1471D0F670C00F486A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE75B1331D0F4D0B00F486A2 /* CoreGraphics.framework */; };
@@ -67,13 +66,6 @@
 			remoteGlobalIDString = FAB8A0141CAC546A00C6DFC1;
 			remoteInfo = KIFFrameworkConsumerTests;
 		};
-		DE75B12D1D0F4CAA00F486A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE4064081C98A71100F7C479 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE40640F1C98A71100F7C479;
-			remoteInfo = inventorymanagement;
-		};
 		DE75B1401D0F667F00F486A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE4064081C98A71100F7C479 /* Project object */;
@@ -96,9 +88,6 @@
 		DE4064221C98A71100F7C479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE4064241C98A71100F7C479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE75B10E1D0F4B1C00F486A2 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = inventorymanagement/Frameworks/KIF/KIF.xcodeproj; sourceTree = "<group>"; };
-		DE75B1281D0F4CAA00F486A2 /* inventorymanagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inventorymanagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE75B12A1D0F4CAA00F486A2 /* inventorymanagementTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = inventorymanagementTests.m; sourceTree = "<group>"; };
-		DE75B12C1D0F4CAA00F486A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE75B1331D0F4D0B00F486A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DE75B1351D0F4D1C00F486A2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DE75B13B1D0F667F00F486A2 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,13 +111,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE75B1251D0F4CAA00F486A2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE75B1381D0F667F00F486A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				DE4064121C98A71100F7C479 /* inventorymanagement */,
-				DE75B1291D0F4CAA00F486A2 /* inventorymanagementTests */,
 				DE75B13C1D0F667F00F486A2 /* AcceptanceTests */,
 				DE4064111C98A71100F7C479 /* Products */,
 				DE75B10E1D0F4B1C00F486A2 /* KIF.xcodeproj */,
@@ -157,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				DE4064101C98A71100F7C479 /* inventorymanagement.app */,
-				DE75B1281D0F4CAA00F486A2 /* inventorymanagementTests.xctest */,
 				DE75B13B1D0F667F00F486A2 /* AcceptanceTests.xctest */,
 			);
 			name = Products;
@@ -211,15 +191,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DE75B1291D0F4CAA00F486A2 /* inventorymanagementTests */ = {
-			isa = PBXGroup;
-			children = (
-				DE75B12A1D0F4CAA00F486A2 /* inventorymanagementTests.m */,
-				DE75B12C1D0F4CAA00F486A2 /* Info.plist */,
-			);
-			path = inventorymanagementTests;
-			sourceTree = "<group>";
-		};
 		DE75B13C1D0F667F00F486A2 /* AcceptanceTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,24 +219,6 @@
 			productName = inventorymanagement;
 			productReference = DE4064101C98A71100F7C479 /* inventorymanagement.app */;
 			productType = "com.apple.product-type.application";
-		};
-		DE75B1271D0F4CAA00F486A2 /* inventorymanagementTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DE75B12F1D0F4CAA00F486A2 /* Build configuration list for PBXNativeTarget "inventorymanagementTests" */;
-			buildPhases = (
-				DE75B1241D0F4CAA00F486A2 /* Sources */,
-				DE75B1251D0F4CAA00F486A2 /* Frameworks */,
-				DE75B1261D0F4CAA00F486A2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DE75B12E1D0F4CAA00F486A2 /* PBXTargetDependency */,
-			);
-			name = inventorymanagementTests;
-			productName = inventorymanagementTests;
-			productReference = DE75B1281D0F4CAA00F486A2 /* inventorymanagementTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DE75B13A1D0F667F00F486A2 /* AcceptanceTests */ = {
 			isa = PBXNativeTarget;
@@ -297,10 +250,6 @@
 					DE40640F1C98A71100F7C479 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
-					DE75B1271D0F4CAA00F486A2 = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = DE40640F1C98A71100F7C479;
-					};
 					DE75B13A1D0F667F00F486A2 = {
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = DE40640F1C98A71100F7C479;
@@ -327,7 +276,6 @@
 			projectRoot = "";
 			targets = (
 				DE40640F1C98A71100F7C479 /* inventorymanagement */,
-				DE75B1271D0F4CAA00F486A2 /* inventorymanagementTests */,
 				DE75B13A1D0F667F00F486A2 /* AcceptanceTests */,
 			);
 		};
@@ -388,13 +336,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE75B1261D0F4CAA00F486A2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE75B1391D0F667F00F486A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,14 +361,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE75B1241D0F4CAA00F486A2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE75B12B1D0F4CAA00F486A2 /* inventorymanagementTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE75B1371D0F667F00F486A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,11 +372,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DE75B12E1D0F4CAA00F486A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE40640F1C98A71100F7C479 /* inventorymanagement */;
-			targetProxy = DE75B12D1D0F4CAA00F486A2 /* PBXContainerItemProxy */;
-		};
 		DE75B1411D0F667F00F486A2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DE40640F1C98A71100F7C479 /* inventorymanagement */;
@@ -567,44 +495,6 @@
 			};
 			name = Release;
 		};
-		DE75B1301D0F4CAA00F486A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = inventorymanagementTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				New_Setting = "";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.etsy.inventorymanagementTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inventorymanagement.app/inventorymanagement";
-			};
-			name = Debug;
-		};
-		DE75B1311D0F4CAA00F486A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = inventorymanagementTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				New_Setting = "";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCtest,
-					"-ObjC",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.etsy.inventorymanagementTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inventorymanagement.app/inventorymanagement";
-			};
-			name = Release;
-		};
 		DE75B1431D0F667F00F486A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -659,14 +549,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		DE75B12F1D0F4CAA00F486A2 /* Build configuration list for PBXNativeTarget "inventorymanagementTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE75B1301D0F4CAA00F486A2 /* Debug */,
-				DE75B1311D0F4CAA00F486A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 		DE75B1421D0F667F00F486A2 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
 			isa = XCConfigurationList;
