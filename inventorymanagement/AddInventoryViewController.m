@@ -8,7 +8,10 @@
 
 #import "AddInventoryViewController.h"
 
-@interface AddInventoryViewController ()
+@interface AddInventoryViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (nonatomic,strong) NSArray *pickerData;  // can this be weak 
+
 
 @end
 
@@ -21,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (!self) { return nil; }
     
-    self.title = @"add";
+    self.title = @"add item";
     
     return self;
 }
@@ -29,8 +32,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    self.view.backgroundColor = [UIColor blueColor];
+    self.pickerData = @[@"Record", @"StatueFigure", @"CD", @"ArtPrint", @"ComicBook"];
+    
+    self.picker.dataSource = self;
+    self.picker.delegate = self;
+    
+  /*  
+      
+   UITextField *titleTextField = [UITextField new];
+    titleTextField.frame = CGRectMake(40, // points from the left side
+                                      120, // points down from the top
+                                      self.view.bounds.size.width - 80, // width
+                                      45); // height
+    titleTextField.placeholder = @"title";
+    [self.view addSubview:titleTextField];
+   
+   UILabel *titleLabel = [[UILabel alloc] init];
+   titleLabel.frame = CGRectMake(20, 80, self.view.bounds.size.width - 40, 45);
+   titleLabel.textColor = [UIColor darkTextColor];
+   titleLabel.text = self.inventoryItem.title;
+   [self.view addSubview:titleLabel];
+
+ */
     
     UITextField *titleTextField = [UITextField new];
     titleTextField.frame = CGRectMake(40, // points from the left side
@@ -68,6 +93,26 @@
 
 - (void)cancelButtonWasTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // why all the curly braces below. cant change this??
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+
+{
+    return 1;
+}
+
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+
+{
+    return _pickerData.count;
+}
+
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return _pickerData[row];
 }
 
 

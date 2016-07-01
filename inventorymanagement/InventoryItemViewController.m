@@ -18,9 +18,6 @@
 
 #pragma mark - Lifecyle
 
-// Fix so that different labels show
-// Fix BOOL for Framed
-
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     return [self initWithInventoryItem:nil];
 }
@@ -39,11 +36,12 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     
+    [super viewDidLoad];
+
     int startingYPos = 135;
     int yDelta = 20;
-    
+
     
     self.title = self.inventoryItem.title;
     self.view.backgroundColor = [UIColor whiteColor];
@@ -83,16 +81,20 @@
         
     }
     
-     /* if ([self.inventoryItem conformsToProtocol:@protocol(Framable)]) {
-     UILabel *framedLabel = [[UILabel alloc] init];
-     framedLabel.frame = CGRectMake(20, 112, self.view.bounds.size.width - 40, 30);
-     framedLabel.textColor = [UIColor darkTextColor];
-     framedLabel.font = [UIFont systemFontOfSize:15];
-     // should it be a BOOL or a swtich
-     // do i need to update the property to have values like Physical ENUM
-     // locationLabel.text = self.inventoryItem. ? @"Has location" : @"No location";
-    
-         */
+    if ([self.inventoryItem conformsToProtocol:@protocol(Framable)]) {
+        id <Framable>item = (id <Framable>)self.inventoryItem;
+        UILabel *framedLabel = [[UILabel alloc] init];
+        framedLabel.frame = CGRectMake(20, startingYPos, self.view.bounds.size.width - 40, 30);
+        framedLabel.textColor = [UIColor darkTextColor];
+        framedLabel.font = [UIFont systemFontOfSize:15];
+        framedLabel.text = item.isFramed? @"YES" : @"NO";
+        [self.view addSubview:framedLabel];
+
+        
+        startingYPos = startingYPos + yDelta;
+
+    }
+
     
     if ([self.inventoryItem conformsToProtocol:@protocol(Size)]) {
         id <Size> sizeItem = (id <Size>)self.inventoryItem;

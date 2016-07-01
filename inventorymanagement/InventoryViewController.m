@@ -15,8 +15,10 @@
 
 // Class extension
 @interface InventoryViewController () <UITableViewDelegate, UITableViewDataSource>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray  <InventoryCollection *> *inventoryCollections;
+
 @end
 
 @implementation InventoryViewController
