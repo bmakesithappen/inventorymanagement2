@@ -7,11 +7,13 @@
 //
 
 #import "AddInventoryViewController.h"
+#import "InventoryAddFormViewController.h"
 
 @interface AddInventoryViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (nonatomic,strong) NSArray *pickerData;  // can this be weak 
+@property (nonatomic,strong) NSArray *pickerData;  // can this be weak
 
+@property (nonatomic,strong) UIPickerView *picker;
 
 @end
 
@@ -34,29 +36,18 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    
+    self.picker = [UIPickerView new];
+    self.picker.center = self.view.center;
+    
     self.pickerData = @[@"Record", @"StatueFigure", @"CD", @"ArtPrint", @"ComicBook"];
     
-    self.picker.dataSource = self;
+    [self.view addSubview:self.picker];
+    
     self.picker.delegate = self;
-    
-  /*  
-      
-   UITextField *titleTextField = [UITextField new];
-    titleTextField.frame = CGRectMake(40, // points from the left side
-                                      120, // points down from the top
-                                      self.view.bounds.size.width - 80, // width
-                                      45); // height
-    titleTextField.placeholder = @"title";
-    [self.view addSubview:titleTextField];
-   
-   UILabel *titleLabel = [[UILabel alloc] init];
-   titleLabel.frame = CGRectMake(20, 80, self.view.bounds.size.width - 40, 45);
-   titleLabel.textColor = [UIColor darkTextColor];
-   titleLabel.text = self.inventoryItem.title;
-   [self.view addSubview:titleLabel];
+    self.picker.dataSource = self;
 
- */
-    
+
     UITextField *titleTextField = [UITextField new];
     titleTextField.frame = CGRectMake(40, // points from the left side
                                       120, // points down from the top
@@ -89,17 +80,20 @@
 - (void)addButtonWasTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
+    //Instatiate InventoryAddFormView Controller
+    //Push from ADIViewC to IAFVC
+   
+//   InventoryAddFormViewController *viewController = [[InventoryAddFormViewController alloc] initWithInventoryItem:item];
+ //       [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)cancelButtonWasTapped:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
-    // why all the curly braces below. cant change this??
+    // distinct methods each doing their own thing
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-
-{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 

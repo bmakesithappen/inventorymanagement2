@@ -10,7 +10,5 @@
 
 @interface AddInventoryViewController : UIViewController
 
-@property (nonatomic,strong) IBOutlet UIPickerView *picker;
-
-
 @end
+

@@ -17,6 +17,7 @@
 		DE75B1461D0F670300F486A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE75B1351D0F4D1C00F486A2 /* QuartzCore.framework */; };
 		DE75B1471D0F670C00F486A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE75B1331D0F4D0B00F486A2 /* CoreGraphics.framework */; };
 		DE75B1491D0F6A5600F486A2 /* InventoryViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE75B1481D0F6A5600F486A2 /* InventoryViewTest.m */; };
+		DE75B14C1D271B4700F486A2 /* InventoryAddFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE75B14B1D271B4700F486A2 /* InventoryAddFormViewController.m */; };
 		DE92BF3E1CE13DF200B7AE13 /* AddInventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE92BF3D1CE13DF200B7AE13 /* AddInventoryViewController.m */; };
 		DE92BF411CEE794500B7AE13 /* InventoryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE92BF401CEE794500B7AE13 /* InventoryItemViewController.m */; };
 		DEE30AD51CC031DC00CC668E /* InventoryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE30AD41CC031DC00CC668E /* InventoryCollection.m */; };
@@ -93,6 +94,8 @@
 		DE75B13B1D0F667F00F486A2 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE75B13F1D0F667F00F486A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE75B1481D0F6A5600F486A2 /* InventoryViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewTest.m; sourceTree = "<group>"; };
+		DE75B14A1D271B4700F486A2 /* InventoryAddFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryAddFormViewController.h; sourceTree = "<group>"; };
+		DE75B14B1D271B4700F486A2 /* InventoryAddFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryAddFormViewController.m; sourceTree = "<group>"; };
 		DE92BF3C1CE13DF200B7AE13 /* AddInventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInventoryViewController.h; sourceTree = "<group>"; };
 		DE92BF3D1CE13DF200B7AE13 /* AddInventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInventoryViewController.m; sourceTree = "<group>"; };
 		DE92BF3F1CEE794500B7AE13 /* InventoryItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryItemViewController.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				DE92BF401CEE794500B7AE13 /* InventoryItemViewController.m */,
 				DE92BF3C1CE13DF200B7AE13 /* AddInventoryViewController.h */,
 				DE92BF3D1CE13DF200B7AE13 /* AddInventoryViewController.m */,
+				DE75B14A1D271B4700F486A2 /* InventoryAddFormViewController.h */,
+				DE75B14B1D271B4700F486A2 /* InventoryAddFormViewController.m */,
 				DE228F651CA1ED2D0004380F /* InventoryItem.h */,
 				DE228F661CA1ED540004380F /* InventoryItem.m */,
 				DEE30AD31CC031DC00CC668E /* InventoryCollection.h */,
@@ -355,6 +360,7 @@
 				DE92BF3E1CE13DF200B7AE13 /* AddInventoryViewController.m in Sources */,
 				DE4064151C98A71100F7C479 /* main.m in Sources */,
 				DE92BF411CEE794500B7AE13 /* InventoryItemViewController.m in Sources */,
+				DE75B14C1D271B4700F486A2 /* InventoryAddFormViewController.m in Sources */,
 				DEE30AD51CC031DC00CC668E /* InventoryCollection.m in Sources */,
 				DEE30AD81CC034E200CC668E /* InventoryCollectionGenerator.m in Sources */,
 				DE228F671CA1ED540004380F /* InventoryItem.m in Sources */,

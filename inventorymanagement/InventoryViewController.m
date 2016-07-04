@@ -95,8 +95,6 @@
     return self.inventoryCollections[section].name;
 }
 
-// add InventoryItemsViewController
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     InventoryCollection *collection = self.inventoryCollections[indexPath.section];
     InventoryItem *item = collection.inventoryItems[indexPath.row];
