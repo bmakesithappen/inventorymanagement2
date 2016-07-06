@@ -7,7 +7,7 @@
 //
 
 #import "AddInventoryViewController.h"
-#import "InventoryAddFormViewController.h"
+#import "AddInventoryFormViewController.h"
 
 @interface AddInventoryViewController () <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -83,9 +83,9 @@
     //Instatiate InventoryAddFormView Controller
     //Push from ADIViewC to IAFVCgit
     // I know this section is off just cant get what to do
-   
-// InventoryAddFormViewController *viewController = [[InventoryAddFormViewController alloc] initWithInventoryItem:item];
- //  [self.navigationController pushViewController:viewController animated:YES];
+ 
+  //  AddInventoryViewController *viewController = [[AddInventoryFormViewController alloc] initWithInventoryItem:item];
+  //  [self.navigationController pushViewController:viewController animated:YES];
     
 }
 

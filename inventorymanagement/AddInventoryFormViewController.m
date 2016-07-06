@@ -6,13 +6,13 @@
 //  Copyright © 2016 Bernard Desert. All rights reserved.
 //
 
-#import "InventoryAddFormViewController.h"
+#import "AddInventoryFormViewController.h"
 
-@interface InventoryAddFormViewController ()
+@interface AddInventoryFormViewController ()
 
 @end
 
-@implementation InventoryAddFormViewController
+@implementation AddInventoryFormViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
