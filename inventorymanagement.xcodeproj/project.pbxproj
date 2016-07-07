@@ -563,6 +563,7 @@
 				DE75B1441D0F667F00F486A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

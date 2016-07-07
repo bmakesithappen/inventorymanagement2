@@ -78,14 +78,9 @@
 #pragma mark - Actions
 
 - (void)addButtonWasTapped:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-    //Instatiate InventoryAddFormView Controller
-    //Push from ADIViewC to IAFVCgit
-    // I know this section is off just cant get what to do
- 
-  //  AddInventoryViewController *viewController = [[AddInventoryFormViewController alloc] initWithInventoryItem:item];
-  //  [self.navigationController pushViewController:viewController animated:YES];
+
+    AddInventoryFormViewController *viewController = [[AddInventoryFormViewController alloc] init];
+  [self.navigationController pushViewController:viewController animated:YES];
     
 }
 

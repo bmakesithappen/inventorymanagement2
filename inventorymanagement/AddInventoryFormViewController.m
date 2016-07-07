@@ -8,11 +8,12 @@
 
 #import "AddInventoryFormViewController.h"
 
-@interface AddInventoryFormViewController ()
+@interface AddInventoryFormViewController () /// do i need to add a superclass see eror below 
 
 @end
 
 @implementation AddInventoryFormViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

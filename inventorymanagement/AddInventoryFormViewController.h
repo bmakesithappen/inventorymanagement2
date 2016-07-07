@@ -10,4 +10,14 @@
 
 @interface AddInventoryFormViewController : UIViewController
 
+- (instancetype) initWithInventoryItemType: (NSInteger)inventoryItemType;
+
 @end
+
+typedef NS_ENUM(NSInteger, InventoryItemType) {
+    InventoryItemTypeRecord,
+    InventoryItemTypeStatueFigure,
+    InventoryItemTypeCD,
+    InventoryItemTypeArtPrint,
+    InventoryItemTypeComicBook,
+};

@@ -26,7 +26,7 @@
     // A "container controller" that will provide a nav bar
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
     
-    self.window.backgroundColor = [UIColor orangeColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
