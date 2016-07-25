@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CLLocation.h>
 
+typedef NS_ENUM(NSInteger, InventoryItemType) {
+    InventoryItemTypeRecord,
+    InventoryItemTypeStatueFigure,
+    InventoryItemTypeCD,
+    InventoryItemTypeArtPrint,
+    InventoryItemTypeComicBook,
+};
+
 
 @interface InventoryItem : NSObject
 @property (nonatomic, copy) NSString *title;

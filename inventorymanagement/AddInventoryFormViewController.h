@@ -7,17 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InventoryItem.h"
+
 
 @interface AddInventoryFormViewController : UIViewController
 
-- (instancetype) initWithInventoryItemType: (NSInteger)inventoryItemType;
+@property (nonatomic, readonly) InventoryItemType inventoryItemType;
+
+-(instancetype) initWithInventoryItemType:(enum InventoryItemType)inventoryItemType;
 
 @end
 
-typedef NS_ENUM(NSInteger, InventoryItemType) {
-    InventoryItemTypeRecord,
-    InventoryItemTypeStatueFigure,
-    InventoryItemTypeCD,
-    InventoryItemTypeArtPrint,
-    InventoryItemTypeComicBook,
-};
