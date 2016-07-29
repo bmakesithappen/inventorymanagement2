@@ -11,7 +11,7 @@
 
 @interface InventoryItemViewController : UIViewController
 
-- (instancetype)initWithInventoryItem:(InventoryItem *)inventoryItem NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithInventoryItem:(InventoryItem *)inventoryItem NS_DESIGNATED_INITIALIZER;  // normally done in @implentation file ??
 
 @property (nonatomic, strong, readonly) InventoryItem *inventoryItem;
 
