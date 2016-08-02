@@ -11,6 +11,7 @@
 @interface BDFormView () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView *tableView;
+@property (nonatomic,strong) NSArray *formInput;
 
 @end
 
@@ -22,11 +23,25 @@
     if (!self) {
         return nil;
     }
-    return self;
+    
+    self.formInput = formItems;
+    
+    self.tableView = [UITableView new];
+    self.tableView.frame = self.bounds;
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+        
+        return self;
+    }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.formInput.count;
+
 }
 
-/* + (instancetype) formInputWithTitle: (NSString *)title type:(BDFormInput)type
-                            options:(BDFormInputOption)option;
-*/
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UITableViewCell new];
+}
 
 @end

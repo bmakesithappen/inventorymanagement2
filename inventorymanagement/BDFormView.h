@@ -12,12 +12,19 @@
 
 -(instancetype) initWithFormItems:(NSArray *)formItems;
 
+@end
+
 typedef NS_ENUM(NSUInteger, BDFormInputType) {
+    BDFormInputTypeTexField,
+    BDFormInputTypeSwitch
     
 };
 
 typedef NS_OPTIONS(NSUInteger, BDFormInputOption) {
+    BDFormInputOptionCurrency
     
 };
+
+@interface BDFormInput : NSObject
 
 @end
