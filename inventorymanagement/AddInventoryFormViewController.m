@@ -7,11 +7,15 @@
 //
 
 #import "AddInventoryFormViewController.h"
+#import "BDFormView.h"
+
 
 // Class Exentsion
 @interface AddInventoryFormViewController ()
 
 @property (nonatomic) InventoryItemType inventoryItemType;
+
+@property (nonatomic,strong) BDFormView *formView; // property holds formview
 
 @end
 
@@ -29,12 +33,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+   self.formView = [[BDFormView alloc] initWithFormItems:@[] ] ;
+    self.formView.frame = self.formView.bounds;
+    [self.view addSubview:self.formView];
+   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 
 @end

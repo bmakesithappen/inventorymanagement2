@@ -17,7 +17,7 @@
 typedef NS_ENUM(NSUInteger, BDFormInputType) {
     BDFormInputTypeTexField,
     BDFormInputTypeSwitch
-    
+   
 };
 
 typedef NS_OPTIONS(NSUInteger, BDFormInputOption) {

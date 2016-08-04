@@ -12,18 +12,17 @@
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *formInput;
-
+    
 @end
 
 @implementation BDFormView
-
 
 - (instancetype)initWithFormItems:(NSArray *)formItems {
     self = [super initWithFrame:CGRectZero];
     if (!self) {
         return nil;
     }
-    
+
     self.formInput = formItems;
     
     self.tableView = [UITableView new];
@@ -34,6 +33,8 @@
         
         return self;
     }
+
+#pragma mark TableView
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.formInput.count;
